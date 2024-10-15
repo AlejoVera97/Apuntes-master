@@ -4,6 +4,7 @@ Ejemplo del codigo de HTML
 
 ``` html
  <p> Parrafo <p>
+ <img src="img/Ejemplo.png">
 ```
 
 Ejemplo del codigo CSS
@@ -19,3 +20,5 @@ Ejemplo del codigo JS
 ```js
 alert ("Bienvenidos a mi Web")
 ```
+
+
