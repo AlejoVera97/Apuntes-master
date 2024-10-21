@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .box{
+
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            margin: 10px;;
+
+            /*sombra interna*/
+            box-shadow: inset 10px 10px 10px rgb(253, 200, 102);
+
+            /*Borde dibujado a mano*/
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 225px;
+
+            /*Sombra de la caja*/
+            filter:drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+
+            /*Color de texto*/
+            color : white;
+
+            border: 4px solid black;
+            background-color: #eb9d37;
+        }
+        .boxDoble{
+            width: 200px;
+
+        }
+        .flexx{
+            display: flex; /*Se adapta  ala pantalla*/
+            gap: 15px;/* Ancho entre los div*/
+        }
+        .purpelbox{
+            background-color: purple;
+        }
+        .ej1{
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-direction: row;
+        }
+        .ej2{
+            flex-wrap:  nowrap; /* por defecto */
+            flex-wrap: wrap; /*ordena los div entorno a la resolucion*/ 
+        }
+        .ej3{
+            justify-content: flex-start; /*por defecto*/
+            justify-content:  flex-end; /*mueve elementos derecha/abajo */
+            justify-content: center; /*centrado contenido*/
+            justify-content:  space-evenly; /*Mismo espacio entre todos los lugares*/
+            justify-content: space-between; /* los elementos distribuye de manera iguales */
+            justify-content:  space-around; /*pone mas padding en los laterales*/
+        }
+        .ej4{
+            align-items:flex-start; /*cajas al principio*/
+            align-items:  flex-end; /*cajas al final*/ 
+            align-items: center; /*centra la cajas*/
+
+            align-items: stretch;
+            align-items: baseline;
+        }
+        .ej5{
+            flex-grow: inherit; /* los elemtnos creccen*/
+        }
+    </style>
+</head>
+<body>
+    <h1> FlexBox </h1>
+    
+    <h2> Flex Direccion </h2>
+    <div class="flexx ej1">
+        <div class="box"> 1</div>
+        <div class="box boxDoble"> 2</div>
+        <div class="box"> 3</div>
+        <div class="box"> 4</div>
+        <div class="box"> 5</div>
+        <div class="box"> 6</div>
+    </div>
+
+    <h2> Flex Wrap </h2>
+  
+    <div class="flexx ej2">
+        <div class="box"> 1</div>
+        <div class="box boxDoble"> 2</div>
+        <div class="box"> 3</div>
+        <div class="box"> 4</div>
+        <div class="box"> 5</div>
+        <div class="box"> 6</div>
+    </div>
+
+    <h2> Flex Justify content </h2>
+
+        <div class="flexx ej3 purpelbox">
+            <div class="box"> 1</div>
+            <div class="box boxDoble"> 2</div>
+            <div class="box"> 3</div>
+            <div class="box"> 4</div>
+            <div class="box"> 5</div>
+            <div class="box"> 6</div>
+        </div>
+
+    <h2> Align Items </h2>
+    <div class="flexx ej4">
+        <div class="box"> 1</div>
+        <div class="box boxDoble"> 2</div>
+        <div class="box"> 3</div>
+        <div class="box"> 4</div>
+        <div class="box"> 5</div>
+        <div class="box"> 6</div>
+    </div>
+
+    <h2> Flex Grow  </h2>
+    <div class="flexx ej5 purpelbox">
+        <div class="box"> 1</div>
+        <div class="box boxDoble "> 2</div>
+        <div class="box"> 3</div>
+        <div class="box"> 4</div>
+        <div class="box"> 5</div>
+        <div class="box"> 6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 5 </title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            margin: 10px;;
+
+            /*sombra interna*/
+            box-shadow: inset 10px 10px 10px rgb(253, 200, 102);
+
+            /*Borde dibujado a mano*/
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 225px;
+
+            /*Sombra de la caja*/
+            filter:drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+
+            /*Color de texto*/
+            color : white;
+
+            border: 4px solid black;
+            background-color: #eb9d37;
+        }
+        .inline{
+            display: inline;
+        }
+        .block{
+            display: block;
+        }
+        .inline-block{
+            display: inline-block;
+        }
+        .hidden{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Display </h1>
+
+    <h2> Display inline</h2>
+<div>
+        <span class="box inline"> Caja 1</span>
+        <span class="box inline"> Caja 2</span>
+        /*Estos elemenots no tienen height y width*/
+</div>
+
+
+    <h2> Display block</h2>
+<div> 
+    <span class="box block"> Caja 1</span>
+    <span class="box block"> Caja 2</span>
+    /*Estos elementos si tienen height y width*/ 
+</div>
+
+    <h2> Display inline-block</h2>
+<div>
+    <span class="box inline-block"> Caja 1</span>
+    <span class="box inline-block"> Caja 2</span>
+    <br>
+    /* El inline block se comporta como el block pero sin agregar el brak line al final, osea no salta de linea*/
+</div>
+
+    <h2> Display none</h2>
+<div>
+    <span class="box inline-block"> Caja1</span>
+    <span class="box inline-block hidden"> Caja2</span>
+    <span class="box inline-block"> Caja3</span>
+    /* La caja del medio no deberia verse*/
+</div>
+
+</body>
+</html>
