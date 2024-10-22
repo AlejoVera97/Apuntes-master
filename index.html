@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad de ejemplo</title>
+    <style>
+        /*reset*/
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .header{
+            display: flex;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            justify-content: space-between; 
+            align-items: center;
+        }
+        .barraLateral a{
+            color: white;
+            margin: 8px;
+        }
+        
+        .content{
+            display: flex;
+            flex-direction: row; 
+            flex: 1;
+            padding: 10px;
+            background-color: rgba(241, 238, 234, 0.861);
+        }
+        
+        .sidebar{
+            background-color: beige;
+            width: 150px;
+            height: 200px;
+            
+        }
+        .contenido{
+            flex: 1;
+            color: #050505;
+            height: 200px;
+            background-color: azure;
+            margin: 5px;
+            padding: 5px;
+        }
+        .footer{
+            padding: 10px;
+            background-color: #050505;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">LOGO</div>
+            
+            <div class="barraLateral">
+                <a href="">Inicio</a>
+                <a href="">Acerca de</a>
+                <a href="">Servicios</a>
+                <a href="">Contacto</a> 
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="sidebar">
+                <h3>Enlaces:</h3>
+                <ul>
+                    <li><a href="">Enlace1</a></li>
+                    <li><a href="">Enlace2</a></li>
+                    <li><a href="">Enlace3</a></li>
+                </ul>
+            </div>
+            <div class="contenido">
+                <h3>Contenido Principal</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quae 
+                    et rem doloremque at. Exercitationem possimus nisi mollitia pariatur
+                    voluptas quas, ea in, id assumenda explicabo reprehenderit odit ipsam
+                    voluptates! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nostrum veritatis corrupti nisi praesentium. Neque et, reprehenderit
+                    expedita repellat ducimus, recusandae amet nobis natus consequatur
+                    accusamus veritatis, repellendus exercitationem iure provident.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h5>Derechos de autor</h5>
+        </div>
+
+    </div>
+
+</body>
+</html>

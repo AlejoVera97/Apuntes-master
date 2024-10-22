@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout Vertical</title>
+
+    <style>
+        /*Reset*/
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /*Ocupa al menos 100% de la altura de viewport*/
+        }
+        .content{
+            flex:1;        
+            background-color:  lightgrey;    
+        }
+        .header,.footer{
+            background-color: aliceblue;
+            padding: 10px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            Header
+        </div>
+
+        <div class="content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic dicta modi labore magnam ducimus assumenda facilis vero voluptatum architecto sit tenetur accusantium qui sed delectus sint neque fugiat, quidem ipsam.
+        </div>
+
+        <div class="footer">
+            Footer
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

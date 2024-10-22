@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lay out Horizontal </title>
+    <style>
+        /*RESET CSS*/
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            display: flex;
+        }
+        .sidebar{
+            background-color: beige;
+            width: 200px;
+            padding: 20px;
+        }
+        .content{
+            padding: 20px;
+            flex: 1;
+        }
+        .sidebar ul{
+            list-style: none;
+        }
+        .sidebar a{
+            text-decoration: none;
+            color: black;
+        }   
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="sidebar">
+            <ul>
+                <li>Elemento1</li>
+                <li>Elemento2</li>
+                <li>Elemento3</li>
+                <li><a href="./">Home</a></li>
+            </ul>
+
+        </div>
+
+        <div class="content">
+            <h1> Contenido Principal</h1>
+            <P> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tenetur voluptatibus officiis neque nobis provident rem voluptate cumque officia nemo architecto nostrum dignissimos quam, maxime consectetur, harum corrupti quis esse.</P>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
