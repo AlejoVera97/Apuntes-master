@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout cuadricula</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            /*separa entre cada hijo*/
+        }
+        .card {
+            background-color: gray;
+            color: white;
+            padding: 20px;
+            /*estas tres reglas se pueden escribir con flex y el orden*/
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="card">Tarjeta1</div>
+        <div class="card">Tarjeta2</div>
+        <div class="card">Tarjeta3</div>
+        <div class="card">Tarjeta4</div>
+        <div class="card">Tarjeta5</div>
+        <div class="card">Tarjeta6</div>
+    </div>
+
+</body>
+
+</html>
