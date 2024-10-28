@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+            background-color: #f0f0f0;
+        }
+
+        .yellow {
+            background-color: yellow;
+            top: 20px;
+            left: 20px;
+        }
+
+        /*Diferentes posiciones*/
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        .sticky {
+            position: sticky;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Positios</h1>
+
+    <h2>Static</h2>
+    <p>Es la propision nomal de un elemento.</p>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box yellow static">Static</div>
+        <div class="box"></div>
+    </div>
+
+    <h2>Relative</h2>
+    <p> Afecta la posicion top-right  y conserva su espacio </p>
+    <div class="relative">
+        <div class="box"></div>
+        <div class="box yellow relative">Relative</div>
+        <div class="box"></div>
+    </div>
+
+    <h2>Absolute</h2>
+    <p> Afecta la posicion top-right  pero no ocupa su espacio original y 
+        ademas se posiciona con respecto al padre mas cercano que tenga u a propiedad position </p>
+    <div class="Absolute">
+        <div class="box"></div>
+        <div class="box yellow absolute">Aboslute</div>
+        <div class="box"></div>
+    </div>
+    <h2>Fixed</h2>
+    <h2>Sticky</h2>
+</body>
+
+</html>

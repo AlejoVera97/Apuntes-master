@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Abolute</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container {
+            width: 300px;
+            position: relative;
+        }
+
+        .img {
+            width: 100%;
+            opacity: 0.5;
+        }
+        .box {
+            position: absolute;
+            border: 1px solid #fd1212;
+            ;
+        }
+
+        .topleft {
+            top:10px;
+            left:10px;
+        }
+
+        .topright {
+            top:10px;
+            right: 10px;
+        }
+
+        .bottomleft {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .bottomright {
+            bottom:10px;
+            right: 10px;
+        }
+        .center{
+            top:50%;
+            
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Position Absolute Gatito</h1>
+    <p> Recrear esta imgaen en HTML, utilizando position </p>
+
+    <div class="container">
+        <img src="/Dia 9/img/gatito.webp" alt="gatito">
+        <div class="Absolute">
+            <div class="box topleft">Arriba-Izq</div>
+            <div class="box topright">Arriba-Der</div>
+            <div class="box center">Center (w100)</div>
+            <div class="box bottomleft">Abajo-Izq</div>
+            <div class="box bottomright">Abajo-Der</div>
+        </div>
+    </div>
+</body>
+
+</html>
