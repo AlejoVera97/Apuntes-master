@@ -65,7 +65,7 @@
     </div>
 
     <h2>Relative</h2>
-    <p> Afecta la posicion top-right  y conserva su espacio </p>
+    <p> Afecta la posicion top-right y conserva su espacio </p>
     <div class="relative">
         <div class="box"></div>
         <div class="box yellow relative">Relative</div>
@@ -73,15 +73,35 @@
     </div>
 
     <h2>Absolute</h2>
-    <p> Afecta la posicion top-right  pero no ocupa su espacio original y 
+    <p> Afecta la posicion top-right pero no ocupa su espacio original y
         ademas se posiciona con respecto al padre mas cercano que tenga u a propiedad position </p>
     <div class="Absolute">
         <div class="box"></div>
         <div class="box yellow absolute">Aboslute</div>
         <div class="box"></div>
     </div>
+
     <h2>Fixed</h2>
+    <p> Afecta las posiciones , no ocupa espacio, se posiciona respecto al navegador.
+        osea se mantiene fijo en la pantalla </p>
+    <div class="fixed">
+        <div class="box"></div>
+        <div class="box yellow fixed" style="right: 20px; bottom: 20px; left:unset;top:unset;">Fided</div>
+        <div class="box">s</div>
+    </div>
+
     <h2>Sticky</h2>
+    <p> Afecta la posicion top-right y conserva su espacio </p>
+    <div class="container" style="height: 300px;
+    width: 400px;
+    overflow: scroll0;
+    padding: 20px;
+    border: 1px solid gray;
+    ">
+        <div class="box"></div>
+        <div class="box yellow sticky">Sticky</div>
+        <div class="box" style="height: 200px;"></div>
+    </div>
 </body>
 
 </html>
