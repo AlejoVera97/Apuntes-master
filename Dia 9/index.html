@@ -91,16 +91,18 @@
     </div>
 
     <h2>Sticky</h2>
-    <p> Afecta la posicion top-right y conserva su espacio </p>
-    <div class="container" style="height: 300px;
+    <p>Es un comportamiento combinado entre relative y fixed y utiliza el top y left como punto de adhesion.
+        se posiciona con respeto a la ventana del navegador (viewport)  y se queda fijo asta que el elemento padre termina    </p>
+    <div class="container" 
+    style="height: 300px;
     width: 400px;
-    overflow: scroll0;
+    overflow: scroll;
     padding: 20px;
     border: 1px solid gray;
     ">
         <div class="box"></div>
         <div class="box yellow sticky">Sticky</div>
-        <div class="box" style="height: 200px;"></div>
+        <div class="box" style="height: 2000px;"></div>
     </div>
 </body>
 
