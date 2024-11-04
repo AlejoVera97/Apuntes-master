@@ -1,16 +1,16 @@
-* Ejemplo 1 */
-#myElement { color: yellow; }
-#myElement .myBox { color: green; }
+/* Ejemplo 1 */ 
+#myElement { color: yellow; } /* 1 0 0 */
+#myElement .myBox { color: green; } /* 1 1 0 Win */
 
 /* Ejemplo 2 */
-#myElement { color: green; }
-.bodyClass .sectionClass .parentClass[id="myElement"] { color: yellow; }
+#myElement { color: green; }  /* 1 0 0  Win */
+.bodyClass .sectionClass .parentClass[id="myElement"] { color: yellow; } /* 0 4 0 */
 
 /* Ejemplo 3 */
-:root input { color: green; }
+:root input { color: green; } /* 0 1 1 win */
 html body main input { color: yellow; }
 
 /* Ejemplo 4 */
-input.myClass { color: yellow; }
-:root input { color: green; }
-input[type="checkbox"] { color: orange; }
+input.myClass { color: yellow; } /* 0 1 1 */
+:root input { color: green; } /* 0 1 1 */
+input[type="checkbox"] { color: orange; } /* 0 1 1 */
