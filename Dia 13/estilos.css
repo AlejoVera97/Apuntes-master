@@ -1,0 +1,16 @@
+* Ejemplo 1 */
+#myElement { color: yellow; }
+#myElement .myBox { color: green; }
+
+/* Ejemplo 2 */
+#myElement { color: green; }
+.bodyClass .sectionClass .parentClass[id="myElement"] { color: yellow; }
+
+/* Ejemplo 3 */
+:root input { color: green; }
+html body main input { color: yellow; }
+
+/* Ejemplo 4 */
+input.myClass { color: yellow; }
+:root input { color: green; }
+input[type="checkbox"] { color: orange; }
