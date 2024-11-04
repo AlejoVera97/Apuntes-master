@@ -40,6 +40,37 @@ REGLAS:
 html
 <div id="soyCaja" class="caja box">
 <\div>
+```
 
+# BEM Css  https://getbem.com/
 
+<button class="boton">
+</button>
 
+<div class="tarjeta">
+    <img  class="tarjeta__img" src="" alt="">
+    <h3 class="tarjeta__titulo"> titulo </h3>
+    <p class="tarjeta__texto"> soy un parajo </p>
+</div>
+
+# Nomeclatura BEM
+
+-sus nombres son en kebab-case
+
+-bloques:".boton" ".fomulario" ".navegacion"
+
+-elemtnos: son hijos de bloques. Ejemplo: ".formulario__checkbox" ".formulario__boton".
+
+-modificaciones : clases que modifican tanto elemetnos como bloques.
+                  Ejemlpos: ".fomulario__boton--disabled"
+                            ".fomulario__checkbox--disabled"
+                            .[bloque]__[elemento]--[modificar]. {reglas de css}
+
+/*en vez de tener algo como: */
+.header .nav .nav-item .nav-link
+
+pasamos a tener:
+.header{}
+.header__nav{}
+.header__nav-item {}
+.header__nav-link{}
