@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones 1</title>
+
+    <style>
+        body {
+            display: flex;
+            gap: 5px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .box1 {
+            transition: width 2s, height 2s, background-color 2s;
+        }
+
+        .box1:hover {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        .box2 {
+            transition: width 4s ease-in-out 2s;
+
+        }
+
+        .box:hover {
+            width: 500px;
+        }
+
+        .box3 {
+            transition: all  1s;
+            border: 1px dotted green;
+           
+        }
+
+        .box3:hover {
+            border: 4px solid dotted blue;
+            rotate: 70deg;
+        }
+
+        .box3focus {
+            background-color: aquamarine;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <a href="#" class="box box3">Click Me</a>
+
+</body>
+
+</html>
