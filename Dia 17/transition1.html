@@ -7,7 +7,7 @@
     <title>Transiciones 1</title>
 
     <style>
-        body {
+        .cubos{
             display: flex;
             gap: 5px;
         }
@@ -29,7 +29,7 @@
         }
 
         .box2 {
-            transition: width 4s ease-in-out 2s;
+            transition: width  4s ease-in-out 2s;
 
         }
 
@@ -38,9 +38,9 @@
         }
 
         .box3 {
-            transition: all  1s;
+            transition: all 1s;
             border: 1px dotted green;
-           
+
         }
 
         .box3:hover {
@@ -51,16 +51,27 @@
         .box3focus {
             background-color: aquamarine;
         }
+        .boton--click{
+            transition: width 2s, height 2s, background-color 2s;
+        }
+        .boton--click:hover{
+            width: 200px;
+            height: 50px;
+            background-color: blue;
+        }
     </style>
 
 
 </head>
 
 <body>
-
+<section class="cubos">
     <div class="box box1"></div>
     <div class="box box2"></div>
     <a href="#" class="box box3">Click Me</a>
+</section>
+
+    <button class="boton--click"> CLICK ACA </button>
 
 </body>
 
