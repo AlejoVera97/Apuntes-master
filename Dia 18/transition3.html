@@ -1,12 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transitions-JavaScript</title>
+    <style>
+        .acordeon {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .acordeon__content {
+            max-height: 0px;
+            overflow: hidden;
+            border: 1px solid black;
+            transition: max-height 0.5s ease;
+
+        }
+
+        .acordeon__item.open .acordeon__content {
+            max-height: 300px;
+        }
+
+        /*reglas de css para modo oscuro */
+        body {
+            background-color: #fff;
+            color: black;
+            transition: color 2s ease-in, background-color 2s ease-in;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+
+        /*transicion para notificacion */
+        .notificacion {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: transform 0.4s ease-in, opacity 0.4s ease-in;
+        }
+
+        .notificacion.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body>
-    
-    
+
+<body class="dark-mode">
+    <h2> Acordeon</h2>
+    <div class="acordeon">
+        <div class="acordeon__item ">
+            <h3>pregunta1</h3>
+            <div class="acordeon__content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur debitis quisquam facilis quibusdam
+                    magnam temporibus harum sapiente, repellat, nihil neque quia nisi fugiat deserunt corporis
+                    reprehenderit
+                    eius vel, necessitatibus perferendis.
+                </p>
+            </div>
+        </div>
+
+        <div class="acordeon__item open">
+            <h3>pregunta2</h3>
+            <div class="acordeon__content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur debitis quisquam facilis quibusdam
+                    magnam temporibus harum sapiente, repellat, nihil neque quia nisi fugiat deserunt corporis
+                    reprehenderit
+                    eius vel, necessitatibus perferendis.
+                </p>
+            </div>
+        </div>
+
+        <div class="acordeon__item">
+            <h3>pregunta3</h3>
+            <div class="acordeon__content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur debitis quisquam facilis quibusdam
+                    magnam temporibus harum sapiente, repellat, nihil neque quia nisi fugiat deserunt corporis
+                    reprehenderit
+                    eius vel, necessitatibus perferendis.
+                </p>
+            </div>
+        </div>
+        <div class="acordeon__item">
+            <h3>pregunta4</h3>
+            <div class="acordeon__content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur debitis quisquam facilis quibusdam
+                    magnam temporibus harum sapiente, repellat, nihil neque quia nisi fugiat deserunt corporis
+                    reprehenderit
+                    eius vel, necessitatibus perferendis.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Modo Oscuro</h2>
+    <button id="btn-dark"> Preder / Apagar luz</button>
+
+    <h2> Notificaciones </h2>
+    <div class="notificacion">Hola soy una notificacion</div>
+    <button id="btn-noti">Mostrar Notificaciones</button>
+
+
+    <script>
+
+        const lista_items = document.querySelectorAll('.acordeon__item');
+        lista_items.forEach(item => {
+            item.addEventListener('click', () => {
+                lista_items.forEach(item => item.classList.remove('open'));
+                item.classList.add('open');
+            });
+        });
+
+
+
+        // codigo de javscript para agregar o quitar clases.
+        function cambiarClases(buttonSelector, targetSelector, className) {
+
+            const buttons = document.querySelectorAll(buttonSelector);
+            const targets = document.querySelectorAll(targetSelector);
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+
+                    targets.forEach(target => {
+                        target.classList.toggle(className);
+                    });
+
+                });
+            });
+        }
+
+        cambiarClases("#btn-dark", "body", "dark-mode");
+        cambiarClases("#btn-noti",".notificacion", "show");
+
+    </script>
 </body>
+
 </html>
