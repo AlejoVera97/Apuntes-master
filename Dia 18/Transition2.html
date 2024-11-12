@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        all: unset;
+    }
+
+    input {
+        border: 1px solid green;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        transition: border-color 0.5s ease, background-color 0.7s;
+
+    }
+
+    input:focus {
+        border-color: red;
+        background-color: lightblue;
+    }
+
+    /*transicion menu- hover*/
+    .menu ul {
+        transform: translateX(-100%);
+        transition: transform 0.6s ease-in-out;
+        transition:  transform 0.3s, box-shadow 0.3s; 
+
+    }
+
+       .menu:hover ul {
+        transform: translateX(0);
+    }
+
+    /*Transicion tarjeta- Active */
+    .card{
+        border:  1px solid blue;
+        padding: 20px;
+
+    }
+.card:active{
+    transform: scale(0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+</style>
+
+<body>
+    <h3>Inputs-Focus</h3>
+    <input type="text">
+    <input type="text">
+
+    <div class="menu">
+        <h3>Menu-hover</h3>
+        <ul>
+            <li> <a href="#"></a> Home</li>
+            <li><a href="#"></a> Acerca</li>
+            <li><a href="#"></a> Contacto</li>
+        </ul>
+    </div>
+
+
+    <h3>Tarjeta-Active</h3>
+    <div class="card">
+        <h2>Titulo</h2>
+        <p>Click sobre mi o mantenme presionado(movil)</p>
+    </div>
+</body>
+
+</html>

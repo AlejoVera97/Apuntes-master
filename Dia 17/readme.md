@@ -44,3 +44,9 @@ transition: fon-side 4s ease-in-out 2s;
 lineal: constante;
 ease-in: lento-rapido;
 ease-out: rapido-lento;
+cubic-zeier(); -timing
+```
+
+# Cuvic-bezier
+Es una funcion que me permite crear una curva de velocidad personalizada.
+https://cubic-bezier.com
