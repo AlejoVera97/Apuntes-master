@@ -28,10 +28,46 @@ Tenemos un conteiner de 3 filas y 4 columnas
     grid-row-start:1;
     grid-row-end:2;
 }
-
+```
 
 Se pueden invertir el start y el end.
 Existen los numeros de filas y columnas negatvios para seleccionar desde el final del grid.
 En vez de seleccionar inicio y fin de fila/columna podemos usar span para indicar cuando se expande nuestro grid.
 
 con la regla grid-gap para defeinir un espacio entre fila y columnas.
+
+
+## Gird templates areas
+Podemos nombrar celdas utilizando grid-template-areas
+
+```css
+/*seria un conteiner de 3x4 */
+.container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-row: repart(4,100px);
+    grid-gap:10px
+
+    grid-template-areas:
+            "sector1 sector1 sector2"
+            "sector3 sector3 sector2"
+            "sector4 sector5 sector5"
+            "sector4 sector5 sector5";
+}
+
+
+.caja-1{
+    grid:area:sector1;
+}
+.caja-2{
+    grid:area:sector2;
+}
+.caja-3{
+    grid:area:sector3;
+}
+.caja-4{
+    grid:area:sector4;
+}
+.caja-5{
+    grid:area:sector5;
+}
