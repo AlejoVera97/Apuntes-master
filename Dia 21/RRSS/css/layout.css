@@ -3,6 +3,9 @@
     src: url("../fonts") format('truetype');
 }
 
+*{
+    
+}
 .u-txtCrotah{
     font-family: "Crotah";
 }
