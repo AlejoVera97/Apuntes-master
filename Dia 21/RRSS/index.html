@@ -152,20 +152,39 @@
 
     <script>
         //seleccionar elementos
-        const btnDirection= document.querySelector("#btnDireccion")
-        const btnDarkLight=document.querySelector("#btnDarkLight")
-        const iconosContenedor=document.querySelector(".Iconos")
+        const btnDirection = document.querySelector("#btnDireccion")
+        const btnDarkLight = document.querySelector("#btnDarkLight")
+        const iconosContenedor = document.querySelector(".Iconos")
 
 
-        btnDirection.addEventListener("click",() =>{
+
+        btnDirection.addEventListener("click", () => {
             //agregar o quitar la clase u-flexcol
-                iconosContenedor.classList.toggle("u-flexCol")
+            iconosContenedor.classList.toggle("u-flexCol")
             //cambiar el texto del boton
-
+            if (iconosContenedor.classList.contains("u-flexCol")) {
+                btnDirection.textContent = "Fila";
+            }
+            else {
+                btnDirection.textContent = "Columna";
+            }
         })
 
 
-        
+        btnDarkLight.addEventListener("click", () => {
+
+            document.body.classList.toggle("u-Dark")
+
+            if (document.body.classList.contains("u-Dark")) {
+                btnDarkLight.querySelector("span").innerHTML ="light_mode";
+            }
+            else {
+                btnDarkLight.querySelector("span").innerHTML ="dark_mode";
+            }
+        })
+
+
+
     </script>
 
 </body>

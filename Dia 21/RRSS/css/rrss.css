@@ -11,6 +11,12 @@
     --lion-color: #db9601;
 }
 
+/*fix para que el icono de x sea blanco en modo oscuro */
+
+.u-Dark{
+    --x-color: #fff;
+}
+
 
 
 .Iconos {
