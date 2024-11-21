@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <h1>Clicker en JS</h1>
+
+    <button id="btnSuma"> Suma 1 </button>
+    <button id="btnResta"> Resta 1 </buttResta>
+        <button id="btnMulti"> Multiplica por 5 </button>
+        <h3> Cantidad de Clicks </h3>
+            <div id="resultado"> 0000000000</div>
+
+
+
+            <script>
+                //Declaramos variables y obtenemos nueros tags del DOM
+                const btnSuma = document.querySelector("#btnSuma");
+                const btnResta = document.querySelector("#btnResta");
+                const btnMulti = document.querySelector("#btnMulti");
+                const txtResultado= document.querySelector("#resultado");
+
+                let resultado= 0;
+
+                //Crear funciones
+
+                btnSuma.addEventListener("click", ()=>{
+                    console.warn("Click suma");
+                    resultado++;
+                    console.log(resultado);
+
+                    imprimirEnPantalla();
+                });
+
+                btnResta.addEventListener("click", ()=>{
+                    console.clear();
+                    console.warn("Click resta");
+                    resultado--;
+                    console.log(resultado);
+
+                    imprimirEnPantalla();
+                });
+
+                btnMulti.addEventListener("click", ()=>{
+                    console.clear();
+                    console.warn("Click multi");
+                    resultado=resultado*5;
+                    console.log(resultado);
+
+                    imprimirEnPantalla();
+                });
+
+                const imprimirEnPantalla= function(){
+                    console.log(resultado);
+                    txtResultado.innerHTML=resultado;
+                }
+                
+            </script>
+
+
+
+
+            <script>
+                //Dados dos numeros imprimir por consola las operaciones arismetrica.
+
+                let numA = 2;
+                let numB = 5;
+
+                const suma = numA = numB; // 7
+                console.warn("La suma de numA+numB:", numA, " y numB: ", numB, "es igual a ", suma);
+                console.log(numA = numB);
+                const resta = numA - numB; // 3
+                const multiplicacion = numA * numB; // 10
+                const division = numB / numA; // 2 
+                const modulo = numA % numB; // 1
+
+            </script>
+</body>
+
+</html>
