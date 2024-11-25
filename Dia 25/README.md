@@ -79,3 +79,65 @@ let num2= 5;
 const sonIguales= (num1==num2); // true 
 const sonIguales=(num1===num2); // false
 ```
+
+
+## Truthy / Falsy
+
+Las variables en Js pueden tener un valor de "Truthy" o "Flasy" 
+Un valor true es aquel que se evalua como verdadero en un contexto de booleano, mientras que el flase se evalua como falso.
+
+Podemos usar esta propiedad apra la toma de decisiones en nuestro codigo.
+
+```js
+if(valor){
+    //se ejecuta si el valor es truthy
+    console.log("soy truthy");
+}
+    else{
+        // se ejecuta si el valor es falsy
+        console.log("Soy falsy");
+    }
+```
+
+
+```js
+let numero=16;
+if(numero %2 ==0)
+console.log("soy par");
+else{
+    console.log("soy impar");
+}
+```
+
+## Reduccion de condicionales quitanto el else
+
+Podemos simplicar nuestro codigo condicional quitanto el else.
+Esto es util cuando no necesitamos un bloque falsy.
+
+```js
+
+let user="cei";
+let pass="abc123";
+
+let mensaje="Clave incorrecta";
+
+if(pass.lenght<= 8){
+    mesanje ="La pass debe tener al menos 8 caracteres"
+    };
+if(pass.includes("")){
+    mensaje="La pass no puede tener espacio";
+};
+
+console.log(mensaje);
+```
+
+
+## Manipulacion de textos
+
+1. Concatenacion
+
+2. Interpolacion
+    Con las plantillas literales(template literals) puede insertar variables o expresiones dentro de una cadena usando "${}"
+
+
+3. Metodo de String
