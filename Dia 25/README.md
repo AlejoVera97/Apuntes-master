@@ -141,3 +141,30 @@ console.log(mensaje);
 
 
 3. Metodo de String
+
+JavaScript nos ofrece una variadad de metodos para manipular cadenas de textos.
+Algunos ejemplos comunes son :
+A- `toUpperCase()` , `ToLowerCasa()`
+Conviente de una cadena en mayusuculas o minusculas.
+
+B- `split()` 
+Divide una cadena en una lista/array basada en un separador.
+
+C- `slice()`
+Extraer una porcion de la cadena basada en indices de inicio y fin.
+
+D- `replace()`
+Reemplaza una parte de la cadena por otra.
+
+E- `trim()`
+Elimana los espacios al incio y fin de la cadena.
+
+F- `incluides()`
+Verifica si una cadena contiene una subcadena especifica.
+
+G- `startsWith()` y `endsWith()`
+Verifica si una cadena comienza o germina con una subcadena especifica.
+
+H- `repat()`
+Repite una cadena un numero especifico de veces.
+
