@@ -8,7 +8,9 @@
 
     <style>
         h1 {
-            color: blue;
+            background: linear-gradient(to right red, white, black);
+            background-clip: text;
+
             size: 50px;
             text-align: center;
         }
@@ -26,7 +28,7 @@
     <pre>
     1) Convertir el texto " Hola mundo" Todo en mayusuclas sin espacios
     al principio o final.
-    2) Del texto " Estoy aprendiendo JavaScript y PHP" 
+    <p id="texto"> Del texto " Estoy aprendiendo JavaScript y PHP" </p>
     indicar si esta presenta JavaScript , y si esta presente PHP.
     3) Separar el siguiente texto en una lista e imprimir el ultimo valor
     "Lechuga, Tomate , pera , Manzanas"
@@ -46,19 +48,88 @@
 
         //  Ej1:
         document.querySelector("#ej1").addEventListener("click", () => {
-            alert("hola!");
-        });
 
+            const texto = "Hola Mundo";
+            const resultado = texto.trim().tuUpperCase();
+
+            imprimirResultado(resultado);
+        });
 
         //Ej2:
 
+        document.getElementById('ej2').addEventListener('click', function () {
+
+            const texto = document.getElementById('texto').innerText; // Obtener texto desde el párrafo
+            const palabra1 = "JavaScript";
+            const palabra2 = "PHP";
+
+
+            if (texto.includes(palabra1)) {
+                alert(`El texto contiene "${palabra1}"`);
+            } else if (texto.includes(palabra2)) {
+                alert(`El texto contiene "${palabra2}"`);
+            } else {
+                alert("El texto no contiene ni JavaScript ni PHP");
+            }
+        });
+
+        // operacion ternaria:
+        //resultado =text.includes("JavaScript") ? "JavaScript prsente \n": "JavaScript No esta presente\n";
+
+
         //Ej3:
+
+        const texto = "Lecguga, Tomate, Peras, Manzanas";
+        const listaItem = texto.split(" ,");
+
+        document.querySelector("#ej3").addEventListener("click", () => {
+
+
+            // const texto = "Lecguga, Tomate, Peras, Manzanas";
+            //const listaItem = texto.split(" ,");
+            // 1era forma
+            //const cantdeItem =listaItem.length;
+            //const resultado = listaItem[cantdeItem -1];
+
+            //2da forma
+            const resultado = listaItem.pop();
+
+            imprimirResultado(resultado);
+        })
 
         //Ej4:
 
+        document.querySelector("#ej4").addEventListener("click", ()=>{
+            let texto="Amo los atardeceres"
+
+            let resultado= texto.replace("a","à");
+
+            imprimirResultado(resultado);
+        })
+
+
         //Ej5:
 
+        document.querySelector("#ej5").addEventListener("click", ()=>{
+            const array1 = ["Manzana", "Pera", "Uvas"];
+            const array2= ["manzana ", "pera", "uvas"];
+
+            let resultado="Los array son iguales";
+            if(array1[0]!=array2[0]){resultado= "Los arrays son distintos"}
+            if(array1[1]!=array2[1]){resultado= "Los arrays son distintos"}
+            if(array1[2]!=array2[2]){resultado= "Los arrays son distintos"}
+
+            imprimirResultado(resultado);
+
+        })
         //Ej6:
+
+
+        function imprimirResultado(mensaje) {
+            console.log(mensaje);
+            alert(mensaje);
+            //cargar el input
+        }
 
     </script>
 
