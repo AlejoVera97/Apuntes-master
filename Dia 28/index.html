@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+
+<h1> Funciones: </h1>
+
+<button id="ej1"> PAR/IMPAR</button>
+<button id="ej2"> POSITIVO/NEGATIVO</button>
+<button id="ej3"> MAYOR/MENOR DE EDAD</button>
+<button id="ej4"> DIA/LABORAL</button>
+<button id="ej5"> JUEGO </button>
+
+
+<body>
+
+
+
+    <script>
+
+        //EJE1
+
+        function esParOImpar(numero) {
+            if (numero % 2 === 0) {
+                return "El número es par.";
+            } else {
+                return "El número es impar.";
+            }
+        }
+
+        const btnEj1 = document.querySelector("#ej1");
+
+        btnEj1.addEventListener("click", () => {
+            let numero = prompt("Ingresa un numero");
+            let resultado = esParOImpar(numero);
+            console.log(resultado);
+            alert(resultado);
+        })
+
+
+
+
+
+        // EJ2
+
+        function positivoNegativo(numero) {
+            if (numero > 0) {
+                return "El número es positivo.";
+            } else if (numero < 0) {
+                return "El número es negativo.";
+            } else {
+                return "El número es cero.";
+            }
+        }
+
+        const btnEj2 = document.querySelector("#ej2");
+
+        btnEj2.addEventListener("click", () => {
+            let numero = prompt("Ingresa un numero");
+            let resultado = positivoNegativo(numero);
+            console.log(resultado);
+            alert(resultado);
+        })
+
+
+        // EJ3
+
+        function mayorMenor(numero) {
+            if (numero >= 18) {
+                return "Mayor de edad";
+            } else if (numero <= 18) {
+                return "Menor de edad";
+            }
+        }
+
+        const btnEj3 = document.querySelector("#ej3");
+
+        btnEj3.addEventListener("click", () => {
+            let numero = prompt("Ingresa tu edad");
+            let resultado = mayorMenor(numero);
+            console.log(resultado);
+            alert(resultado);
+        })
+
+
+        //EJ 4
+
+        function diaLaboral(dia) {
+            const diasLaborales = ["lunes", "martes", "miércoles", "jueves", "viernes"];
+            const diasNoLaborales = ["sabado", "domingo"];
+
+
+            dia = dia.toLowerCase().trim().replace("á", "é", "í", "ó", "ú");
+
+            if (diasLaborales.includes(dia)) {
+                return `${dia} es un día laboral.`;
+            } else if (diasNoLaborales.includes(dia)) {
+                return `${dia} no es un día laboral.`;
+            } else {
+                return "Por favor, introduce un día válido de la semana.";
+            }
+        }
+
+        const btnEj4 = document.querySelector("#ej4");
+
+        btnEj4.addEventListener("click", () => {
+            let dia = prompt("Ingresa un día").trim();
+            let resultado = diaLaboral(dia);
+            console.log(resultado);
+            alert(resultado);
+        });
+
+
+        //EJ5
+
+        function piedraPapelTijera(jugador1, jugador2) {
+        
+            jugador1 = jugador1.toLowerCase().trim();
+            jugador2 = jugador2.toLowerCase().trim();
+
+           
+            const opcionesValidas = ["piedra", "papel", "tijera"];
+            if (!opcionesValidas.includes(jugador1) || !opcionesValidas.includes(jugador2)) {
+                return ;
+            }
+
+            
+            if (jugador1 === jugador2) {
+                return "Es un empate.";
+            } else if (
+                (jugador1 === "piedra" && jugador2 === "tijera") ||
+                (jugador1 === "papel" && jugador2 === "piedra") ||
+                (jugador1 === "tijera" && jugador2 === "papel")
+            ) {
+                return "Jugador 1 gana.";
+            } else {
+                return "Jugador 2 gana.";
+            }
+        }
+
+
+
+
+        const btnEj5 = document.querySelector("#ej5");
+
+        btnEj5.addEventListener("click", () => {
+            let jugador1 = prompt("JUGADOR 1 : Ingresa PIEDRA , PAPEL O TIJERA ").trim();
+            let jugador2 = prompt("JUGADOR 2 : Ingresa PIEDRA , PAPEL O TIJERA ").trim();
+            let resultado = piedraPapelTijera(jugador1, jugador2);
+            console.log(resultado);
+            alert(resultado);
+
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>
