@@ -46,6 +46,7 @@ listaAlumnos.forEach((alumno,indice)=>{
 });
 ```
 
+------------------------------------------------------------------------
 
 - WHILE:
 
@@ -60,3 +61,25 @@ listaAlumnos.forEach((alumno,indice)=>{
 
  }
  ```
+
+---------------------------------------------------------------------
+
+Do-while
+```js
+let li=0;
+do{consola.log(ii);
+ii++;
+} while (li<10);
+
+
+---------------------------------------------------------------------
+
+- Map
+a diferencia del forEach el meotod map devuelve una copia del array 
+ninguna de los 2 modifica el array original.
+
+consta lista_nums =[ 1, 2, 3,7];
+
+const lista_copia.map((numero, index)=>{
+console.log('Numero ${numero} en la posicion ${index});
+)};
