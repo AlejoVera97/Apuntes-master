@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+</head>
+
+<body>
+
+    <div>
+        <ul id="listaTareas">
+            <li> Ingrese una tarea</li>
+        </ul>
+    </div>
+
+    <form id="formTarea">
+        <input id="txtTarea" type="text" placeholder="Ingresa una tarea">
+        <button type="submit">Agregar Tarea</button>
+    </form>
+
+    <script>
+        // CONSTANTES Y VARIABLES
+        const formu = document.getElementById("formTarea");
+        const txtTarea = document.getElementById("txtTarea");
+        const boxTareas = document.getElementById("listaTareas");
+
+        //const listaDeTareas = ["Ordenar el código JS", "Crear las funciones", "Probar el programa"];
+
+        const listaDeTareas = [
+            {
+                id: 1,
+                titulo: "Ordenar el codigo JS",
+                isComplentada: true,
+            },
+            {
+                id: 2,
+                titulo: "Crear las funciones",
+                isComplentada: true,
+            },
+            {
+                id: 3,
+                titulo: "Probar el programa",
+                isComplentada: true,
+            }
+        ];
+
+
+
+        // FUNCIONES
+        function mostrarTareas() {
+            boxTareas.innerHTML = "";
+            listaDeTareas.forEach((tarea) => {
+
+                const titulo = tarea.titulo;
+                const id = tarea.id;
+                //convertir esta linea para que isChecj sea igual " cheked o a "nada"
+
+                const isChecked = tarea.isComplentada ? "checked":" ";
+               
+
+                boxTareas.innerHTML += `
+                <li>
+                    <input id="${id}" type="checkbox" name="chk_completada"  ${isChecked} </input>
+                     <label for="${id}"> ${titulo} </label>
+                     <button onclick="eliminarTarea(${id})" > Eliminar </button>
+                     <button onclick="completarTarea(${id})" > Completar </button>
+                </li>
+                `;
+            });
+        }
+
+        function agregarTarea() {
+            const nuevaTarea = txtTarea.value.trim();
+            if (nuevaTarea === "") {
+                alert("Por favor, ingresa una tarea");
+                return;
+            }
+            listaDeTareas.push(nuevaTarea);
+            txtTarea.value = "";
+            mostrarTareas();
+        };
+
+
+
+        function eliminarTarea(idTarea) {
+            alert("Eliminar tarea:" + idTarea);
+            // modificar mi listar y eliminar la tarea idTarea
+            mostrarTareas();
+        }
+
+        function completarTarea(idTarea) {
+            alert("completando tarea;" + idTarea);
+            //modificar mi listar y cambiar el booleano de true a flase.
+            mostrarTareas();
+        }
+
+
+
+
+        // EVENT LISTENERS
+        formu.addEventListener("submit", (event) => {
+            event.preventDefault();
+            agregarTarea();
+        });
+
+
+        // INICIALIZAR NUESTRO PROGRAMA
+        mostrarTareas();
+
+
+
+    </script>
+</body>
+
+</html>
