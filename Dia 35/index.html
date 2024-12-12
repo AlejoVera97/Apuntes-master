@@ -73,31 +73,41 @@
 
         function agregarTarea() {
             const nuevaTarea = txtTarea.value.trim();
-            if (nuevaTarea === "") {
+            if (nuevaTarea == "") {
                 alert("Por favor, ingresa una tarea");
                 return;
             }
-            listaDeTareas.push(nuevaTarea);
             txtTarea.value = "";
+            const nuevoID= (Math.random()*100);
+            const objetoTarea= {id: nuevoID, titulo: nuevaTarea, isComplentada:false}
+            listaDeTareas.push(objetoTarea);
             mostrarTareas();
         };
 
 
-
         function eliminarTarea(idTarea) {
-            alert("Eliminar tarea:" + idTarea);
-            // modificar mi listar y eliminar la tarea idTarea
-            mostrarTareas();
-        }
+    // Filtrar la lista de tareas para excluir la tarea con el ID proporcionado
+    const index = listaDeTareas.findIndex((tarea) => tarea.id === idTarea);
+    if (index !== -1) {
+        listaDeTareas.splice(index, 1);
+        alert(`Tarea con ID ${idTarea} eliminada.`);
+        mostrarTareas();
+    } else {
+        alert("Tarea no encontrada.");
+    }
+}
 
-        function completarTarea(idTarea) {
-            alert("completando tarea;" + idTarea);
-            //modificar mi listar y cambiar el booleano de true a flase.
-            mostrarTareas();
-        }
-
-
-
+function completarTarea(idTarea) {
+    // Buscar la tarea por ID y cambiar el estado isComplentada
+    const tarea = listaDeTareas.find((tarea) => tarea.id === idTarea);
+    if (tarea) {
+        tarea.isComplentada = !tarea.isComplentada; // Cambiar true/false
+        alert(`Tarea con ID ${idTarea} actualizada.`);
+        mostrarTareas();
+    } else {
+        alert("Tarea no encontrada.");
+    }
+}
 
         // EVENT LISTENERS
         formu.addEventListener("submit", (event) => {
