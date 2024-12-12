@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordeon</title>
+</head>
+
+<style>
+    .acordeon {
+        border: 0cm;
+    }
+
+    .acordeon-item {
+        padding: 5px;
+
+    }
+
+    .acordeon-content {}
+
+    .acordeon-header {}
+
+    .active .acordeon-content {
+        display: block;
+    }
+
+    .active. .acordeon-header {
+        background-color: orange;
+    }
+</style>
+
+<body>
+    <div class="acordeon">
+        <div class="acordeon-item active">
+            <div class="acordeon-header">Seccion1</div>
+            <div class="acordeon-content">Contenido Seccion 1</div>
+        </div>
+        <div class="acordeon-item">
+            <div class="acordeon-header">Seccion2</div>
+            <div class="acordeon-content">Contenido Seccion 2</div>
+        </div>
+        <div class="acordeon-item">
+            <div class="acordeon-header">Seccion 3</div>
+            <div class="acordeon-content">Contenido Seccion 3</div>
+        </div>
+    </div>
+
+    <script>
+
+        // variables
+        const headers = document.querySelectorAll(".acordeon-header");
+        const items = document.querySelectorAll(".acordeon-item");
+
+
+        // funciones y listerners
+        headers.forEach((header) => {
+            header.addeEventListener("click", () => {
+                const item = header.closest(".acordeon-item");
+                items.forEach(elemento => {
+                    elemento.classList.remove("active");
+                });
+                item.classList.toggle("active");
+            });
+        });
+
+        
+
+        // programa
+
+
+    </script>
+
+</body>
+
+</html>
