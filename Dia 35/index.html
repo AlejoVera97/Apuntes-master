@@ -57,8 +57,8 @@
                 const id = tarea.id;
                 //convertir esta linea para que isChecj sea igual " cheked o a "nada"
 
-                const isChecked = tarea.isComplentada ? "checked":" ";
-               
+                const isChecked = tarea.isComplentada ? "checked" : " ";
+
 
                 boxTareas.innerHTML += `
                 <li>
@@ -78,36 +78,34 @@
                 return;
             }
             txtTarea.value = "";
-            const nuevoID= (Math.random()*100);
-            const objetoTarea= {id: nuevoID, titulo: nuevaTarea, isComplentada:false}
+            const nuevoID = (Math.random() * 100);
+            const objetoTarea = { id: nuevoID, titulo: nuevaTarea, isComplentada: false }
             listaDeTareas.push(objetoTarea);
             mostrarTareas();
         };
 
 
         function eliminarTarea(idTarea) {
-    // Filtrar la lista de tareas para excluir la tarea con el ID proporcionado
-    const index = listaDeTareas.findIndex((tarea) => tarea.id === idTarea);
-    if (index !== -1) {
-        listaDeTareas.splice(index, 1);
-        alert(`Tarea con ID ${idTarea} eliminada.`);
-        mostrarTareas();
-    } else {
-        alert("Tarea no encontrada.");
-    }
-}
+            const index = listaDeTareas.findIndex((tarea) => tarea.id === idTarea);
+            if (index !== -1) {
+                listaDeTareas.splice(index, 1);
+                alert(`Tarea con ID ${idTarea} eliminada.`);
+                mostrarTareas();
+            } else {
+                alert("Tarea no encontrada.");
+            }
+        }
 
-function completarTarea(idTarea) {
-    // Buscar la tarea por ID y cambiar el estado isComplentada
-    const tarea = listaDeTareas.find((tarea) => tarea.id === idTarea);
-    if (tarea) {
-        tarea.isComplentada = !tarea.isComplentada; // Cambiar true/false
-        alert(`Tarea con ID ${idTarea} actualizada.`);
-        mostrarTareas();
-    } else {
-        alert("Tarea no encontrada.");
-    }
-}
+        function completarTarea(idTarea) {
+            const tarea = listaDeTareas.find((tarea) => tarea.id === idTarea);
+            if (tarea) {
+                tarea.isComplentada = !tarea.isComplentada; 
+                alert(`Tarea con ID ${idTarea} actualizada.`);
+                mostrarTareas();
+            } else {
+                alert("Tarea no encontrada.");
+            }
+        }
 
         // EVENT LISTENERS
         formu.addEventListener("submit", (event) => {
