@@ -48,14 +48,17 @@ agregarIntervalo();
 
 
 // 4. Funcionalidad de intervalo
-
+// para cuando paso el mouse por encima de SliderImages
 sliderImages.addEventListener('mouseover', () => {
+    //elimina cualquier timer guardado dentro de intervalos.
     clearInterval(intervalos);
 });
 sliderImages.addEventListener('mouseout', () => {
     agregarIntervalo();
 });
 function agregarIntervalo() {
+    //guardo en intervalos 
+    // crear un intervalo con setinterval(fucion,tiempo)
     intervalos = setInterval(nextImage, 1000);
 }
 
