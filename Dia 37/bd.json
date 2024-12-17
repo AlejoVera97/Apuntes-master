@@ -1,0 +1,18 @@
+const lista_imagenes_json = `[
+    {
+        "File": "imagen1.jpg",
+        "Description": "imagen 1"
+    },
+    {
+        "File": "imagen2.jpg",
+        "Description": "imagen 2"
+    }, 
+    {
+        "File": "imagen3.jpg",
+        "Description": "imagen 3"
+    },
+    {
+        "File": "imagen4-long.jpg",
+        "Description": "imagen 4"
+    },
+]`;
