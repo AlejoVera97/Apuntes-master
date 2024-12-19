@@ -76,6 +76,6 @@ fetch("")
 
 ```js
 async function traerDatos(){
-    
-}
+    try{}
+}}
 ```
